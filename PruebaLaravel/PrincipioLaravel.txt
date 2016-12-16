@@ -1,0 +1,123 @@
+-------------CONFIGURACIONES---------------
+
+ir a getcomposer
+descargar composer
+instalar
+
+*escribir comando de la pagina desde la consola(cambia de acuerdo a la version)
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+*Comprobar instalacion
+php -v (tecla Enter)
+composer -version (tecla Enter)
+
+*Crear un proyecto en Laravel
+cd C:\xampp\htdocs
+composer create-project laravel/laravel nombre_del_proyecto --prefer-dist
+accede a http://localhost/nombre_del_proyecto/public en el navegador
+
+*Comprobar version de laravel
+php artisan -version
+
+*Cambiar nombre de app 
+php artisan app:name Cinema
+
+	.ENV.php
+
+NOTA:para poner en modo debug y ver mas especificaciones de error
+hay que ir a .env y poner true en debug
+al pasar a produccion hay que ponerlo en false.
+
+	config/.APP.php
+
+*Cambiar Zona Horaria con php timezone
+America_Mexico_City
+
+*Cambiar idioma español desde laravel 5 lang github
+buscamos la carpeta es y creamos archivos desde una carpeta es en resources y copiamos el codigo en cada archivo
+
+*Cambiar nombre de base de datos,usuario y contraseña.
+
+	NOTAS:
+
+*Configuracion del gestor de base de datos es:
+config/database.php
+
+*Configuracion de autenticacion para modelo,tablas y eloquete
+config/auth.php
+
+----------------------RUTAS-------------------------
+
+*se va en la carpeta routes desde la raiz del proyecto y dentro escoges el archivo
+web.php en la version 5.3 de Laravel y se escribe lo siguiente:
+
+Accedes desde localhost:8000/prueba
+Route::get('prueba',function(){
+	return "Hola desde routes.php";
+});
+
+Accedes desde localhost:8000/nombre/tu_nombre
+Route::get('nombre/{nombre}',function($nombre){
+	return "Mi nombre es: ".$nombre;
+});
+
+Accedes desde localhost:8000/edad/tu_edad
+Route::get('edad/{edad}',function($edad){
+	return "Mi edad es: ".$edad;
+});
+
+Accedes desde localhost:8000/edad2 (valor predeterminado = 20)
+Route::get('edad2/{edad?}',function($edad = 20){
+	return "Mi edad es: ".$edad;
+});
+
+*levantar servidor 
+php artisan serve
+
+------------------CONTROLADORES----------------------
+
+INTERMEDIARIO ENTRE EL MODELO Y LA VISTA
+
+*Ruta de los controladores
+app/http/controllers
+
+*Creamos una prueba controller y dentro escribimos
+    public function index()
+    {
+    	return "Hola desde Controller";
+    }
+
+*en web.php (routes) escribimos una ruta
+Route::get('controlador','PruebaController@index');
+
+*con nombre(atributos)
+Route::get('name/{nombre}','PruebaController@nombre');
+	prueba controller.php
+    public function nombre($nombre)
+    {
+    	return "Hola mi nombre es: ".$nombre;
+    }
+
+
+
+-----------------CONTROLADOR RESTFUL------------------
+
+*escribimos en web.php 
+Route::resource('movie','MovieController');
+
+*desde la consola (xmapp2/htdocs/miprimerapagina) escribimos
+php artisan make:controller MovieController --resource
+
+*luego lo activamos
+php artisan serve
+
+Creara un controlador con las funciones ya dadas y con multiples rutas
+
+
+
+
+
+
