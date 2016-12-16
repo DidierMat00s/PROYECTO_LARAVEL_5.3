@@ -1,3 +1,4 @@
+IMPORTANTE AL SALIR DE LA CONSOLA BUSCA LA RUTA DEL PROYECTO Y ACTIVA EL SERVER
 -------------CONFIGURACIONES---------------
 
 ir a getcomposer
@@ -106,7 +107,7 @@ Route::get('name/{nombre}','PruebaController@nombre');
 -----------------CONTROLADOR RESTFUL------------------
 
 *escribimos en web.php 
-Route::resource('movie','MovieController');
+Route::resource('movie','MovieController'); //una sola ruta
 
 *desde la consola (xmapp2/htdocs/miprimerapagina) escribimos
 php artisan make:controller MovieController --resource
@@ -114,7 +115,16 @@ php artisan make:controller MovieController --resource
 *luego lo activamos
 php artisan serve
 
-Creara un controlador con las funciones ya dadas y con multiples rutas
+*Creara un controlador con las funciones ya dadas y con multiples rutas
+*si queremos crear una ruta desde MovieController aqui se añade el return
+
+*para acceder a las rutas
+localhost:8000/movie
+localhost:8000/movie/create
+
+-----------------MODELOS------------------------------
+
+*para generar modelo es:
 
 
 

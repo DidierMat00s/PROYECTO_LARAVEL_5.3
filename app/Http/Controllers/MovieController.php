@@ -25,6 +25,7 @@ class MovieController extends Controller
     public function create()
     {
         //
+        return "Estoy en el create";
     }
 
     /**
