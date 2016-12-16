@@ -1,0 +1,58 @@
+1:- Ubicar la ruta de la carpeta del proyecto
+(ls=menciona las carpetas dentro de la ruta
+ cd= especifica donde mencionar la ruta
+2.-git init 
+( escanea los archivos dentro del proyecto)
+ rm-rf= remueve carpetas con archivos dentro
+3.-git status
+(muestra el estado del proyecto)
+4.-git add -A
+(guarda todos los archivos y rastree)
+5.-git status
+(debe estar en otro color)
+6.-git commit .m "Estos son los archivos base de mi portafolio"
+(crea un commit que es 
+7.- git log
+(dice cuantos commits hay en el repositorio)
+--guardar cambios en html
+8.-git status
+9.-git add -A o git add index.html
+10.-git status
+11.-git commit -m "subi foto de perfil y nombre"
+12.-git log
+cambios
+13.-git status
+14.-git add -A
+15.-git commit -m "Perfil web escrito"
+16.-git log
+cambios
+17.-git status
+18.-git add -A
+19.-git commit -m "Agregue redes sociales"
+20.-git log
+cambios
+21.-git status
+22.-git add -A
+23.-git commit -m "Agregue descripcion"
+24.-git log
+cambios
+25.-git status
+26.-git add -A
+27.-git commit -m "Salve mi portafolio"
+28.-git log
+29.- git log > commits.txt
+(guardar txt commits)
+30.- git checkout --codigo commit--
+(regresa al version que tu quieres con el commit
+30.- git checkout --codigo commit--
+32.-30.- git checkout master
+(regresa al master)
+
+git reset --soft
+git reset --mixed
+git reset --hard
+
+
+git commit -am "asdasd"
+git log --oneline --graph --all
+git config --global alias.rama "git log --oneline --graph --all	"
