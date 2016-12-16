@@ -125,6 +125,16 @@ localhost:8000/movie/create
 -----------------MODELOS------------------------------
 
 *para generar modelo es:
+php artisan make:model Movie -m
+php artisan make:model Genre -m
+
+*Dentro de los modelos se escribe
+protected $table = "Movies"
+protected $table = "Genres"
+
+*CODE FIRST 
+
+
 
 
 
